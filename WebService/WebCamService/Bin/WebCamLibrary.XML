@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WebCamLibrary</name>
+    </assembly>
+    <members>
+        <member name="T:WebCamLibrary.WebCam">
+            <summary>
+            This Class will initialize the camera using Windows Image Acquisition (WIA).
+            Also, provide Methods to view all connected cameras, capture single frame.
+            </summary>
+        </member>
+        <member name="F:WebCamLibrary.WebCam.WiaVideoObj">
+            <summary>
+             variables needed 
+            </summary>
+        </member>
+        <member name="M:WebCamLibrary.WebCam.#ctor">
+            <summary>
+            Initialize The WebCam Class
+            </summary>
+        </member>
+        <member name="M:WebCamLibrary.WebCam.NewWebCam">
+            <summary>
+            Please use this method to create a WebCam Object.
+            </summary>
+            <returns>WebCam Object</returns>
+        </member>
+        <member name="M:WebCamLibrary.WebCam.CloseResources">
+            <summary>
+            Use to it to close any open resources.
+            </summary>
+        </member>
+        <member name="M:WebCamLibrary.WebCam.GetConnectedCameras">
+            <summary>
+            Get Connected Cameras
+            </summary>
+            <returns>string[] contains names of connected cameras</returns>
+        </member>
+        <member name="M:WebCamLibrary.WebCam.SetDefaultDevice(System.String)">
+            <summary>
+            use this method to set the camera to capture 
+            from if you have more than one camera.
+            </summary>
+            <param name="name">Name of the camera device. Get name from GetConnectedCameras() </param>
+            <returns></returns>
+        </member>
+        <member name="M:WebCamLibrary.WebCam.GrabFrame">
+            <summary>
+            Use it to grab a frame. Use System.IO.MemoryStream to load image
+            </summary>
+            <returns>byte array of the captured image</returns>
+        </member>
+    </members>
+</doc>
